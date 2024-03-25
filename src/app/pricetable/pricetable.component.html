@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">დასახელება</th>
+      <th scope="col">რაოდენობა</th>
+      <th scope="col">ფასი</th>
+      <th scope="col">გადახდილი</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <th>{{ item.id }}</th>
+      <td>{{ item.dasaxeleba }}</td>
+      <td>{{ item.raodenoba }}</td>
+      <td>{{ item.fasi }}</td>
+      <td>
+        {{ item.gadaxdili | yesNo }}
+      </td>
+    </tr>
+  </tbody>
+</table>
