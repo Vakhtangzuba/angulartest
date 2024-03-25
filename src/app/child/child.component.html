@@ -1,0 +1,26 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <h2 class="d-block position-relative" style="margin-top: 15px">
+    Child კომპონენტი
+  </h2>
+  <p class="bg-danger text-white">{{ message }}</p>
+
+  <div class="input-group mb-3 w-50">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Recipient's username"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+      [(ngModel)]="inputValue"
+    />
+    <div class="input-group-append">
+      <button
+        class="btn btn-outline-primary"
+        type="button"
+        (click)="sendValueToParent()"
+      >
+        Search movie
+      </button>
+    </div>
+  </div>
+</div>

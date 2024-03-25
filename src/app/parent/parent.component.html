@@ -1,0 +1,22 @@
+<div class="container d-block position-relative" style="top: 10px">
+  <select
+    id="myselect"
+    class="form-select"
+    aria-label="Default select example"
+    (change)="getData($event)"
+  >
+    <option value="">აირჩიეთ ფილმი</option>
+    <option
+      class="myselect_option bg-info text-dark"
+      *ngFor="let movie of movieList"
+      [selected]="movie.id == defaultMovie"
+    >
+      {{ movie.value }}
+    </option>
+  </select>
+
+  <app-child
+    [message]="mymessage"
+    (parentData)="parentData($event)"
+  ></app-child>
+</div>
